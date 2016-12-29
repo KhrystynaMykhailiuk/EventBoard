@@ -1,0 +1,10 @@
+*.dll
+*.pdb
+*.dbmdl
+bin
+obj
+*.suo
+*.sqlproj.user
+*.refactorlog
+*.sqlproj.vspscc
+/Sql.Server.Project/Sql.Server.Project.sqlproj.user
