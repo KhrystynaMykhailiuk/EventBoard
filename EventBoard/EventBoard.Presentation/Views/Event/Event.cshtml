@@ -14,7 +14,7 @@
     </div><br>
 
     <img src="@Url.Content("~/Content/Images/" + Model.Image)" class="img-rounded col-md-offset-2 col-md-8" style="margin: 0 auto; height: 600px; padding-bottom: 66px;" />
-
+    <span style="margin-top: 0; font-weight: bold; font-size: 18px;">Status:</span><span> @(Model.Status ? "Active" : "Inactive")</span>
     <h3 style="margin-top: 0">Description:</h3>
     <p>@Model.Description</p>
 

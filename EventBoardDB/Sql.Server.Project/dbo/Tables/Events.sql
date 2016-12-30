@@ -19,6 +19,7 @@
     [TitleColor] NVARCHAR(30) NULL, 
     [EventStatus] NVARCHAR(10) NULL , 
 	[GoogleId] NVARCHAR(64) NULL,
+	[Status] bit NOT NULL default 1,
     CONSTRAINT [PK_dbo.Events] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_dbo.Events_dbo.Streams_Stream_Id] FOREIGN KEY ([Stream_Id]) REFERENCES [dbo].[Streams] ([Id]),
     CONSTRAINT [FK_dbo.Events_dbo.Users_Creator_Id] FOREIGN KEY ([Creator_Id]) REFERENCES [dbo].[Users] ([Id]),

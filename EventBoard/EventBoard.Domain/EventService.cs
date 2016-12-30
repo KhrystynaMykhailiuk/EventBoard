@@ -35,6 +35,7 @@ namespace EventBoard.Domain
 
                 Name = e.Name,
                 Description = e.Description,
+                Status = e.Status,
 
                 Comments = new EventCommentsSummaryModel
                 {
@@ -119,7 +120,8 @@ namespace EventBoard.Domain
 
                 Description = newEventInfo.Description,
                 Name = newEventInfo.Name,
-                Category_Id = categoryId.Value
+                Category_Id = categoryId.Value,
+                Status = newEventInfo.Status
             };
 
             Context.Events.Add(newEvent);
@@ -155,6 +157,7 @@ namespace EventBoard.Domain
             newEvent.Description = newEventInfo.Description;
             newEvent.Name = newEventInfo.Name;
             newEvent.Category_Id = categoryId.Value;
+            newEvent.Status = newEventInfo.Status;
 
             Context.SaveChanges();
 
@@ -184,6 +187,7 @@ namespace EventBoard.Domain
                     Name = e.Name,
                     Image = e.Image,
                     Description = e.Description,
+                    Location = e.Location,
                     Likes = new EventLikeCounterModel
                     {
                         Count = e.Likes.Count,
@@ -201,6 +205,7 @@ namespace EventBoard.Domain
                         Id = t.Id,
                         Name = t.Name
                     }).ToList(),
+                    Status = e.Status,
                     Comments = e.Comments.Select(c => new EventCommentModel
                     {
                         Id = c.Id,
@@ -233,7 +238,8 @@ namespace EventBoard.Domain
                         Name = e.Name,
                         AuthorId = e.User.Id,
                         AuthorName = e.User.FirstName,
-                        AuthorSurname = e.User.SecondName
+                        AuthorSurname = e.User.SecondName,
+                        Status = e.Status
                     }).ToList()
                 }).FirstOrDefault();
 

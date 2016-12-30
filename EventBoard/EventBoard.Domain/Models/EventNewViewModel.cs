@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -36,5 +37,9 @@ namespace EventBoard.Domain.Models
         [Required]
         [Display(Name = "Location")]
         public string Location { get; set; }
+
+        [DefaultValue(true)]
+        [Display(Name = "Status")]
+        public bool Status { get; set; }
     }  
 }

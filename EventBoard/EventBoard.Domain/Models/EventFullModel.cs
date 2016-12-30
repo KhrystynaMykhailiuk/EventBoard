@@ -22,5 +22,7 @@ namespace EventBoard.Domain.Models
         public List<TagModel> Tags { get; set; }
         public List<EventCommentModel> Comments { get; set; }
         public bool IsLikedByCurrentUser { get; set; }
+        public bool Status { get; set; }
+        public string Location { get; set; }
     }
 }

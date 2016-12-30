@@ -159,15 +159,15 @@ namespace EventBoard.Presentation.Controllers
                         CreatedDate = DateTime.Now,
                         ModifiedDate = DateTime.Now,
                         UserName = model.Email,
-                        FirstName = "Marta",
-                        SecondName = "Hryvniak",
+                        FirstName = model.FirstName,// "Marta",
+                        SecondName = model.SecondName,// "Hryvniak",
                         Email = model.Email,
                         PasswordHash = "",
                         Image = "",
                         BirthDate = new DateTime(2016, 5, 13),
 
                         SecurityStamp = "",
-                        PhoneNumber = "",
+                        PhoneNumber = model.PhoneNumber,
 
                         LockoutEnabled = false,
                         IsActive = true,
